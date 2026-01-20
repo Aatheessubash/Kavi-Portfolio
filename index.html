@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaviarasu R | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h2{ color:#38bdf8; }
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#e5e7eb;
+    font-size:14px;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:radial-gradient(circle at top,#1e293b,#020617);
+}
+
+.hero h1{ font-size:3rem; }
+
+.hero span{
+    background:linear-gradient(90deg,#38bdf8,#a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{ color:#94a3b8; margin:15px 0; }
+
+.hero a{
+    padding:12px 35px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#38bdf8,#a855f7);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* Sections */
+section{
+    padding:90px 10%;
+}
+
+h2{
+    font-size:2.2rem;
+    margin-bottom:30px;
+    background:linear-gradient(90deg,#38bdf8,#a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Glass Card */
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(56,189,248,0.2);
+}
+
+/* Skills */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skills span{
+    padding:10px 20px;
+    border-radius:25px;
+    background:linear-gradient(90deg,#38bdf8,#a855f7);
+    font-size:14px;
+}
+
+/* Certificates */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.cert{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    padding:25px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.cert:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(168,85,247,0.25);
+}
+
+.cert h3{
+    color:#38bdf8;
+    margin-bottom:8px;
+}
+
+.cert p{
+    color:#cbd5f5;
+    font-size:14px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* Reveal animation */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+    nav{ padding:15px 25px; }
+    section{ padding:70px 25px; }
+    .hero h1{ font-size:2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Kaviarasu</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Hello, I'm <span>Kaviarasu R</span></h1>
+        <p>BSc Computer Science Student | UI/UX Designer</p>
+        <a href="#contact">Hire Me</a>
+    </div>
+</section>
+
+<section id="about" class="reveal">
+    <h2>About Me</h2>
+    <div class="card">
+        Passionate Computer Science student with interest in UI/UX design,
+        programming, and data technologies. Always eager to learn and grow.
+    </div>
+</section>
+
+<section id="education" class="reveal">
+    <h2>Education</h2>
+    <div class="card">BSc Computer Science – NGM College (2023–2026) | 71.5%</div>
+    <div class="card">HSC – 77% | Sankar Ponnar HSS</div>
+    <div class="card">SSLC – 100% | Sankar Ponnar HSS</div>
+</section>
+
+<section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>C</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>HTML</span>
+        <span>UI/UX Design</span>
+        <span>Problem Solving</span>
+    </div>
+</section>
+
+<!-- 🔥 CERTIFICATES SECTION -->
+<section id="certificates" class="reveal">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+        <div class="cert">
+            <h3>Python Course</h3>
+            <p>IIT Bombay (Online)</p>
+            <p>2025</p>
+        </div>
+        <div class="cert">
+            <h3>Python for Data Science</h3>
+            <p>NPTEL</p>
+            <p>2025</p>
+        </div>
+        <div class="cert">
+            <h3>Power BI</h3>
+            <p>VAC</p>
+            <p>2025</p>
+        </div>
+        <div class="cert">
+            <h3>HTML Course</h3>
+            <p>IIT Bombay (Online)</p>
+            <p>2024</p>
+        </div>
+        <div class="cert">
+            <h3>Graphic Design with Photoshop</h3>
+            <p>Great Learning</p>
+            <p>2024</p>
+        </div>
+        <div class="cert">
+            <h3>Cloud Based Automation</h3>
+            <p>VAC</p>
+            <p>2024</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <div class="card">
+        📧 kyarasu363@gmail.com<br>
+        📞 +91 6374449525<br>
+        🌍 English, Tamil
+    </div>
+</section>
+
+<footer>
+    © 2026 Kaviarasu R • Portfolio
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+    reveals.forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
